@@ -1,0 +1,28 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+    <h1 class="govuk-heading-l">
+      {{ serviceName }}
+    </h1>
+
+    <h2 class="govuk-heading-m">
+Current version
+    </h2>
+
+    <p>
+      <a href="/guidance">Guidance page</a><br>
+      <a href="/start">Start page</a>
+    </p>
+
+    <h2 class="govuk-heading-m">
+
+
+{% endblock %}

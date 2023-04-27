@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Jedi mind trick alert</h1>
+        <p class="govuk-body">
+          You may be falling for a jedi mind trick.
+        </p>
+
+        {% if data['jedi'] == "beard" %}
+        <p class="govuk-body">
+          You should ask the creature with the beard for their identification.
+        </p>
+        {% endif %}
+
+        {% if data['jedi'] == "robe" %}
+        <p class="govuk-body">
+          You should ask the creature wearing a robe for their identification.
+        </p>
+        {% endif %}
+
+        {% if data['jedi'] == "robe,lightsabre" %}
+        <p class="govuk-body">
+          You should ask the creature with a beard and wearing a robe for their identification.
+        </p>
+        {% endif %}
+
+        {% if data['jedi'] == "lightsabre" %}
+        <p class="govuk-body">
+          You should arrest and search any creature carrying a lightsabre.
+        </p>
+        {% endif %}
+
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  How would you describe the creatures with the droids?
+                </h1>
+              </legend>
+              <div id="waste-hint" class="govuk-hint">
+                Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="robe" name="jedi" type="checkbox" value="robe">
+                  <label class="govuk-label govuk-checkboxes__label" for="robe">
+                    Wearing a robe
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="beard" name="jedi" type="checkbox" value="beard">
+                  <label class="govuk-label govuk-checkboxes__label" for="beard">
+                    Has a beard
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="lightsabre" name="jedi" type="checkbox" value="lightsabre">
+                  <label class="govuk-label govuk-checkboxes__label" for="lightsabre">
+                    Carrying a lightsabre
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nothing" name="jedi" type="checkbox" value="nothing">
+                  <label class="govuk-label govuk-checkboxes__label" for="nothing">
+                    Nothing unusual
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+
+{% endblock %}
